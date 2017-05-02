@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sri-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sri-app-wp
+    spec:
+      containers:
+      - name: sri-app-wp
+        image: gcr.io/sri-proj2/sri-app-wp
+        ports:
+        - containerPort: 80

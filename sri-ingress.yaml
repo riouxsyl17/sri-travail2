@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sri-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /nignx
+        backend:
+          serviceName: sri-service
+          servicePort: 80
+      - path: /nignx2
+        backend:
+          serviceName: sri-service
+          servicePort: 80

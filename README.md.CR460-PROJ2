@@ -1,0 +1,50 @@
+Allo Patrice,
+
+je n'ai pas réussi à compléter ... 
+ .... Voici aund même mon statut personnel pour que je puisse poursuivre quand j'aurai plus de temps
+
+- Container Engine et instance SQL créés sur GCP
+- Docker Toolbox installé sur mon MAC et image Docker créé et poussé sur GCP.IO
+- Fichiers de déploiement et service créés et exécutés 
+
+
+CI-DESSOUS une brève historique de mes commandes que j'ai gardé ....
+..... afin de m'aider à poursuivre 
+
+  393  bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
+  402  gcloud info
+  404  gcloud components update
+  405  gcloud info
+  406  gcloud config list
+  407  gcloud config list core/project
+  412  gcloud config set project sri-proj2
+  413  gcloud config list
+  414  gcloud config set compute/zone us-east1-b
+  418  gcloud container clusters create sri-cluster-wp --num-nodes 2
+  420  cd CR460
+  426  vi Dockerfile
+  443  more entrypoint.sh
+  444  vi Dockerfile
+  447  cp wp-config.php-template wp-config.php
+  448  vi wp-config.php
+  491  /Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh
+
+docker build -t gcr.io/sri-proj2/sri-app-wp .
+
+  542  mv nginx-deployment.yaml sri-deployment.yaml
+  543  vi sri-deployment.yaml
+  544  mv nginx-service.yaml sri-service.yaml
+  545  vi sri-service.yaml
+  549  rm entrypoint.sh
+  550  mv nginx-ingress.yaml sri-ingress.yaml
+  551  vi sri-ingress.yaml
+  553  kubectl cluster-info
+  554  kubectl create -f sri-deployment.yaml
+  555  vi sri-deployment.yaml
+  557  kubectl create -f sri-deployment.yaml
+  558  vi sri-deployment.yaml
+  565  kubectl create -f sri-deployment.yaml
+  566  kubectl create -f sri-service.yaml
+  575  kubectl get deploy
+  576  kubectl get service
+  583  gcloud projects list
